@@ -10,6 +10,6 @@ namespace ChatCMD.Terminal.Domain.ApiModels
     {
         public string? ApiKey { get; set; }
         public string? ApiUrl { get; set; }
-        public string? Message { get; set; }
+        public string? Greetings { get; set; }
     }
 }
