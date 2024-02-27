@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ChatCMD.Terminal.Domain\ChatCMD.Terminal.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCMD.Terminal.Application", "Source\ChatCMD.Terminal.Application\ChatCMD.Terminal.Application.csproj", "{A22C3B24-9B2A-4FEE-8D92-78F570BD7E8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E7900B08-2B09-4B9A-AA9D-A44507BE3D80} = {E7900B08-2B09-4B9A-AA9D-A44507BE3D80}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCMD.Terminal.Infrastructure", "Source\ChatCMD.Terminal.Infrastructure\ChatCMD.Terminal.Infrastructure.csproj", "{E7900B08-2B09-4B9A-AA9D-A44507BE3D80}"
 EndProject
