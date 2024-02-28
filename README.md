@@ -5,7 +5,8 @@
 
   <p align="center">
     <h2 align="center">OpenAI model in the form of Console App</h2>
-    <br />
+    <br/>
+    <br/>
 </div>
 
 
