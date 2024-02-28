@@ -18,7 +18,7 @@ ChatCMD is an amator project of recreating basic functionalities of the real Cha
 The future objective of the development is to:
 - give the user access multiple chats with the model
 - save previous conversation to a file or database
-- additional application options - like Model's Request Lenght
+- additional application options - like Model's Response Lenght
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
