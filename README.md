@@ -67,6 +67,6 @@ Project Link: [github.com/JakubNovvak/ChatCMD](https://github.com/JakubNovvak/Ch
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: https://i.ibb.co/ZJVhMH4/var3.png
+[product-screenshot]: https://i.ibb.co/hXv0R1K/obraz-2024-02-28-172019378.png
 [.NetCsharp]: https://img.shields.io/badge/-.NET%208.0%20%7C%20%20C%23%2012.0-blueviolet?style=for-the-badge
 [.NetCsharp-url]: https://dotnet.microsoft.com/en-us/
