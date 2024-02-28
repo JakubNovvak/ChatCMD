@@ -5,8 +5,7 @@
 
   <p align="center">
     <h2 align="center">OpenAI model in the form of Console App</h2>
-    <br/>
-    <br/>
+    
 </div>
 
 
@@ -36,6 +35,8 @@ In order to setup the project, you need to follow few simple steps:
 1. Create a new account on https://openai.com/
 2. In the "API keys" section, create a new key and copy it
 3. Paste your key in a "ApiKey" field of "ApiConnection/apiconfig.json" file located in the "Infrastructure" project
+
+![ApiConfig File screenshot][apiconfig-screenshot]
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -68,5 +69,6 @@ Project Link: [github.com/JakubNovvak/ChatCMD](https://github.com/JakubNovvak/Ch
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: https://i.ibb.co/xfc9ZHs/obraz-2024-02-28-172239613.png
+[apiconfig-screenshot]: https://i.ibb.co/zhkJ72J/obraz-2024-02-28-173055932.png
 [.NetCsharp]: https://img.shields.io/badge/-.NET%208.0%20%7C%20%20C%23%2012.0-blueviolet?style=for-the-badge
 [.NetCsharp-url]: https://dotnet.microsoft.com/en-us/
