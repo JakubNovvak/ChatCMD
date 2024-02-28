@@ -4,7 +4,7 @@
 ![Product Name Screen Shot][product-screenshot]
 
   <p align="center">
-    <h3 align="center">OpenAI model in the form of Console App</h3>
+    <h2 align="center">OpenAI model in the form of Console App</h2>
     <br />
 </div>
 
