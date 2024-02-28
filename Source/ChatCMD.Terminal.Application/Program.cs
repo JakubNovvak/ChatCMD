@@ -1,12 +1,24 @@
 ﻿using ChatCMD.Terminal.Infrastructure.ApiConnection;
+using ChatCMD.Terminal.Presentation.TextHighlighting;
+using ChatCMD.Terminal.Presentation.Pages;
+using System;
+using System.ComponentModel.Design;
+using ChatCMD.Terminal.Application.TerminalMenu;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        //Show Computer's name
-        string userName = Environment.UserName;
 
+        MainMenu.MainMenuLoop();
+
+        //Console.WriteLine("Test1");
+        //Console.WriteLine("Test2");
+        //Console.SetCursorPosition(0, Console.CursorTop - 1);
+        //ClearCurrentConsoleLine();
+        
+
+/*
         //Green color for chat's response
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write("ChatCMD>");
@@ -16,6 +28,7 @@ class Program
         Console.WriteLine($"{await ApiConnection.SendMessageToAPI(true, "empty")}");
 
         Console.WriteLine("----------------------");
+
 
         while (true)
         {
@@ -44,6 +57,6 @@ class Program
 
 
             Console.WriteLine("----------------------");
-        }
+        }*/
     }
 }
