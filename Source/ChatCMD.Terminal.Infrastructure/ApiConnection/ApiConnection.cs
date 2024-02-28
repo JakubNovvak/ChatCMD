@@ -11,6 +11,7 @@ using System.Xml.Linq;
 using ChatCMD.Terminal.Domain.ApiModels;
 using ChatCMD.Terminal.Domain.ApiModels.Request;
 using ChatCMD.Terminal.Domain.ApiModels.Response;
+using ChatCMD.Terminal.Infrastructure.Cache;
 
 namespace ChatCMD.Terminal.Infrastructure.ApiConnection
 {
@@ -32,18 +33,20 @@ namespace ChatCMD.Terminal.Infrastructure.ApiConnection
                 requestMessageContent = apiConfigurationData.Greetings;
 
 
-            ChatCompletionRequest completitionRequest = new()
-            {
-                Model = "gpt-3.5-turbo",
-                MaxTokens = 150,
-                Messages = 
-                [
+            SessionClass.Messages.Add
+                (
                     new RequestMessage()
                     {
                         Role = "user",
                         Content = requestMessageContent
                     }
-                ]
+                );
+
+            ChatCompletionRequest completitionRequest = new()
+            {
+                Model = "gpt-3.5-turbo",
+                MaxTokens = 150,
+                Messages = SessionClass.Messages
             };
 
             var completionRequestStringified = JsonSerializer.Serialize(completitionRequest);
@@ -75,6 +78,15 @@ namespace ChatCMD.Terminal.Infrastructure.ApiConnection
 
                 //Manual Dispose to avoid nested usings
                 httpClient.Dispose();
+
+                SessionClass.Messages.Add
+                    (
+                        new RequestMessage()
+                        {
+                            Role = "assistant",
+                            Content = completionResponse.Choices?[0]?.RequestMessage?.Content!
+                        }
+                    );
 
                 return completionResponse.Choices?[0]?.RequestMessage?.Content!;
             }       
