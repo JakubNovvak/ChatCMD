@@ -1,0 +1,5 @@
+{
+  "ApiKey": "<YOUR_OPEN_AI_FREE_API_KEY>",
+  "ApiUrl": "https://api.openai.com//v1/chat/completions",
+  "Greetings": "Say hello to the user and welcome them in ChatCMD. Then, ask what can you help them with."
+}
