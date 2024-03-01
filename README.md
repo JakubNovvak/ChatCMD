@@ -36,7 +36,13 @@ In order to setup the project, you need to follow few simple steps:
 2. In the "API keys" section, create a new key and copy it
 3. Paste your key in a "ApiKey" field of "ApiConnection/apiconfig.json" file located in the "Infrastructure" project
 
-![ApiConfig File screenshot][apiconfig-screenshot]
+``` json
+{
+  "ApiKey": "<YOUR_OPEN_AI_FREE_API_KEY>",
+  "ApiUrl": "https://api.openai.com//v1/chat/completions",
+  "Greetings": "Say hello to the user and welcome them in ChatCMD. Then, ask what can you help them with."
+}
+```
 
 <!-- ROADMAP -->
 ## Roadmap
