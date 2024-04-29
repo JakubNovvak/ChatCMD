@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div><br/>
 
-![Product Name Screen Shot][product-screenshot]
+![Product Name Screen Shot](ChatCMDLogo.png)
 
   <p align="center">
     <h2 align="center">OpenAI model in the form of Console App</h2>
