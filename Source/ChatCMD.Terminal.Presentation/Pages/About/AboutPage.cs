@@ -11,15 +11,15 @@ namespace ChatCMD.Terminal.Presentation.Pages.About
     {
         public static void PrintAbout()
         {
-            ColorMassage.PrintColorMessage("Green", "ChatCMD", false);
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, "ChatCMD", false);
             Console.WriteLine(" is an amator project of recreating basic functionalities of the real ChatGPT ChatBot.\n" +
                               "The Project uses OpenAI completion API with the Free Plan API Key. At this stage of\n" +
                               "development, ChatCMD offers single chat converstaion with the language model, with\n" +
                               "application's session based chat history."
                 );
-            ColorMassage.PrintColorMessage("Blue", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+            ColorMassage.PrintColorMessage(ConsoleColor.Blue, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-            ColorMassage.PrintColorMessage("Green", " ] Exit");
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, " ] Exit");
         }
     }
 }

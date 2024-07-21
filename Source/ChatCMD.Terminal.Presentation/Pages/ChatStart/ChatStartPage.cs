@@ -11,11 +11,15 @@ namespace ChatCMD.Terminal.Presentation.Pages.ChatStart
     {
         public static void PrintChatAdvice()
         {
-            ColorMassage.PrintColorMessage("none", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            ColorMassage.PrintColorMessage("none", "|", false);
-            ColorMassage.PrintColorMessage("Green", "! Type \"exit\" to get back the to main menu !", false);
-            ColorMassage.PrintColorMessage("none", "|");
-            ColorMassage.PrintColorMessage("none", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+            //ColorMassage.PrintColorMessage("none", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            //ColorMassage.PrintColorMessage("none", "|", false);
+            Console.Write("|", false);
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, "! Type \"exit\" to get back the to main menu !", false);
+            //ColorMassage.PrintColorMessage("none", "|");
+            Console.WriteLine( "|");
+            //ColorMassage.PrintColorMessage("none", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         }
     }
 }

@@ -10,19 +10,21 @@ namespace ChatCMD.Terminal.Presentation.TextHighlighting
     //Just the "quality of life" functions
     public static class ColorMassage
     {
-        public static void PrintColorMessage(string color, string message)
+        public static void PrintColorMessage(ConsoleColor color, string message)
         {
-            PrintingColorBody(color);
+            //PrintingColorBody(color);
+            Console.ForegroundColor = color;
 
             Console.WriteLine(message);
             Console.ResetColor();
         }
 
-        public static void PrintColorMessage(string color, string message, bool addNewLineFlag)
+        public static void PrintColorMessage(ConsoleColor color, string message, bool addNewLineFlag)
         {
-            PrintingColorBody(color);
+            //PrintingColorBody(color);
+            Console.ForegroundColor = color;
 
-            if(addNewLineFlag)
+            if (addNewLineFlag)
                 Console.WriteLine(message);
             else
                 Console.Write(message);
@@ -30,7 +32,7 @@ namespace ChatCMD.Terminal.Presentation.TextHighlighting
             Console.ResetColor();
         }
 
-        private static void PrintingColorBody(string color)
+/*        private static void PrintingColorBody(string color)
         {
             switch (color)
             {
@@ -53,7 +55,7 @@ namespace ChatCMD.Terminal.Presentation.TextHighlighting
                 default:
                     break;
             }
-        }
+        }*/
 
         public static void PrintWhiteBackground(string content)
         {

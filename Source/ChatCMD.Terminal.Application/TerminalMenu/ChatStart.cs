@@ -18,7 +18,7 @@ namespace ChatCMD.Terminal.Application.TerminalMenu
         {
             ChatStartPage.PrintChatAdvice();
 
-            ColorMassage.PrintColorMessage("Green", "ChatCMD>", false);
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, "ChatCMD>", false);
 
             //First Greetings Response
             var greetingsTask = Task.Run(async () => await ApiConnection.SendMessageToAPI(true, "<Greetings Respone.>"));
@@ -29,7 +29,7 @@ namespace ChatCMD.Terminal.Application.TerminalMenu
 
             while (true)
             {
-                ColorMassage.PrintColorMessage("Blue", $"{_userName}>", false);
+                ColorMassage.PrintColorMessage(ConsoleColor.Blue, $"{_userName}>", false);
 
                 var userInput = Console.ReadLine();
 
@@ -38,7 +38,7 @@ namespace ChatCMD.Terminal.Application.TerminalMenu
 
                 Console.WriteLine("----------------------");
 
-                ColorMassage.PrintColorMessage("Green", "ChatCMD>", false);
+                ColorMassage.PrintColorMessage(ConsoleColor.Green, "ChatCMD>", false);
 
                 //Getting response
                 var task = Task.Run(async () => await ApiConnection.SendMessageToAPI(false, userInput));

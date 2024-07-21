@@ -21,20 +21,20 @@ namespace ChatCMD.Terminal.Presentation.Pages.MainMenu
 
         public static void PrintMainMenu(int index)
         {
-            ColorMassage.PrintColorMessage("Blue", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ColorMassage.PrintColorMessage(ConsoleColor.Blue, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             Console.ForegroundColor = ConsoleColor.Green;
             foreach (var graphicLine in _menuGraphic)
-                ColorMassage.PrintColorMessage("Green", graphicLine);
+                ColorMassage.PrintColorMessage(ConsoleColor.Green, graphicLine);
 
-            ColorMassage.PrintColorMessage("Blue", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ColorMassage.PrintColorMessage(ConsoleColor.Blue, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             Console.WriteLine("Choose your option:\n");
 
             for (int i = 0; i < _menuOptions.Length; i++)
             {
                 if (i == index)
-                    ColorMassage.PrintColorMessage("Green", " " + _menuOptions[i]);
+                    ColorMassage.PrintColorMessage(ConsoleColor.Green, " " + _menuOptions[i]);
                 else
                     Console.WriteLine(_menuOptions[i]);
             }

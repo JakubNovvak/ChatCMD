@@ -12,14 +12,14 @@ namespace ChatCMD.Terminal.Presentation.Pages.Options
         public static void PrintOptions()
         {
             Console.Write("Choose an option and change it's value by pressing ");
-            ColorMassage.PrintColorMessage("Green", "Enter.");
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, "Enter.");
 
-            ColorMassage.PrintColorMessage("Blue", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+            ColorMassage.PrintColorMessage(ConsoleColor.Blue, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-            ColorMassage.PrintColorMessage("Red", "] Language - [English]");
-            ColorMassage.PrintColorMessage("Red", "] Response Token Lenght - [150]");
-            ColorMassage.PrintColorMessage("Red", "] Terminal Size - [Custom]");
-            ColorMassage.PrintColorMessage("Green", " ] Exit");
+            ColorMassage.PrintColorMessage(ConsoleColor.Red, "] Language - [English]");
+            ColorMassage.PrintColorMessage(ConsoleColor.Red, "] Response Token Lenght - [150]");
+            ColorMassage.PrintColorMessage(ConsoleColor.Red, "] Terminal Size - [Custom]");
+            ColorMassage.PrintColorMessage(ConsoleColor.Green, " ] Exit");
         }
     }
 }
