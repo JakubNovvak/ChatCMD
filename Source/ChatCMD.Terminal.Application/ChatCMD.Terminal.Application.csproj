@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChatCMD.Terminal.Infrastructure\ChatCMD.Terminal.Infrastructure.csproj" />
+    <ProjectReference Include="..\ChatCMD.Terminal.Presentation\ChatCMD.Terminal.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

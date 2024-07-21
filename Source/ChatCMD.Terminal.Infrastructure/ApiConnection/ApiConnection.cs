@@ -12,6 +12,8 @@ using ChatCMD.Terminal.Domain.ApiModels;
 using ChatCMD.Terminal.Domain.ApiModels.Request;
 using ChatCMD.Terminal.Domain.ApiModels.Response;
 using ChatCMD.Terminal.Infrastructure.Cache;
+using System.Net;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ChatCMD.Terminal.Infrastructure.ApiConnection
 {
@@ -23,7 +25,7 @@ namespace ChatCMD.Terminal.Infrastructure.ApiConnection
 
             //TODO: Call method from Application, that will exit App/handle error
             if (apiConfigurationData == null)
-                return "Error: Can't find/open the configuration file.";
+                return " <Error: Can't find/open the configuration file>";
 
             string? requestMessageContent;
 
@@ -62,7 +64,23 @@ namespace ChatCMD.Terminal.Infrastructure.ApiConnection
                 var httpClient = new HttpClient();
 
                 HttpResponseMessage? httpResponse = await httpClient.SendAsync(httpRequest);
-                httpResponse.EnsureSuccessStatusCode();
+
+                try
+                {
+                    httpResponse.EnsureSuccessStatusCode();
+                }
+                catch (HttpRequestException ex)
+                {
+                    SessionClass.Messages.RemoveAt(SessionClass.Messages.Count - 1);
+
+                    if (httpResponse.StatusCode == HttpStatusCode.TooManyRequests)
+                        return " <Slow Down! Too many requests>";
+
+                    if (httpResponse.StatusCode == HttpStatusCode.Forbidden || httpResponse.StatusCode == HttpStatusCode.Unauthorized)
+                        return " <Invalid ApiKey - check your ApiKey in the \"apiconfig.json\" file, and try again>";
+
+                    return " <An unexpected error occured while trying to Connect to the server. Try again later>";
+                }
 
                 var completionResponse = httpResponse.IsSuccessStatusCode 
                     ? JsonSerializer.Deserialize<ChatCompletionResponse>(await httpResponse.Content.ReadAsStringAsync()) 
@@ -70,11 +88,17 @@ namespace ChatCMD.Terminal.Infrastructure.ApiConnection
 
                 //TODO: Call method from Application, that will exit App/handle error
                 if (completionResponse == null)
-                    return "Error: The response was empty...";
+                {
+                    SessionClass.Messages.RemoveAt(SessionClass.Messages.Count - 1);
+                    return " <Error: The response was empty...>";
+                }
 
                 //TODO: Call method from Application, that will exit App/handle error
                 if (completionResponse.Choices?[0]?.RequestMessage?.Content == null)
-                    return "Error: The resposnse was ok, but there is no chat content.";
+                {
+                    SessionClass.Messages.RemoveAt(SessionClass.Messages.Count - 1);
+                    return " <Error: The resposnse was ok, but there is no chat content.>";
+                }
 
                 //Manual Dispose to avoid nested usings
                 httpClient.Dispose();
