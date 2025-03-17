@@ -8,7 +8,11 @@
     
 </div>
 
+<br>
 
+_**Edit 1** - Since 2024 the OpenAI API is no longer free of charge. In order to test projects functionality you need an active plan. Soon there will be an option  to use other models, such as DeepSeek. Appropiate option will be aviable in the **Options** menu. For now, without an API, you can check chat history functionality. If you happen to have a paid plan, feel free to use the application to its fullest extent_
+
+<br>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
