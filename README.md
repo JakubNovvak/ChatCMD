@@ -26,6 +26,10 @@ The future objective of the development is to:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<div align="center" style="text-align: center;">
+    <img src="Docs/chatcmd_demo.gif" alt="chatcmd gif" width="800"/>
+</div>
+
 ### Built With
 
 * [![.NET][.NetCsharp]][.NetCsharp-url]
